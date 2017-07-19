@@ -1,7 +1,7 @@
 import processColor from './processColor';
 import type { Color } from './processColor';
 import fontSetting from './data/fonts';
-
+import colorCircles from './data/colors';
 export const colors = {
   Haus: '#F3F4F4',
   Night: '#333',
@@ -65,7 +65,6 @@ export const fonts = {
     marginBottom: 24,
   },
 };
-
 export default {
   colors: Object.keys(colors).reduce(
     (acc, name) => ({
@@ -76,6 +75,7 @@ export default {
   ),
   fontSetting,
   fonts,
+  colorCircles,
   spacing,
 };
 

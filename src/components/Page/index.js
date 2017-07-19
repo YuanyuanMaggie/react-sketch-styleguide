@@ -8,13 +8,15 @@ const PAGE_HEIGHT = 1000;
 
 type PageType = {
   name?: string,
+  width?:number,
+  height?:number,
   children?: any,
 };
 
-const Page = ({name, children}: PageType) => (
+const Page = ({name, width, height, children}: PageType) => (
   <View name={'Page-'+name} style={{ 
-      width: PAGE_WIDTH,
-      height: PAGE_HEIGHT,
+      width: width|| PAGE_WIDTH,
+      height: height|| PAGE_HEIGHT,
       paddingLeft: 30, 
       paddingRight: 30,
       paddingTop: 30,
